@@ -9,7 +9,7 @@ auth_token = os.environ['TWILIO_AUTH_TOKEN']
 client = Client(account_sid, auth_token)
 
 call = client.calls.create(
-    url='http://demo.twilio.com/docs/voice.xml',
+    twiml='<Response><Say>This is a test call</Say></Response>',
     to='+14047218853',
     from_='+17089984068'
 )
